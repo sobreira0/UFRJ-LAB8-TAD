@@ -29,3 +29,9 @@
 
 - pixelDif -> Soma os componentes de dois Pixels, caso a soma exceda 255, o valor padrão é o próprio 255
 - candyColors -> Verifica se o Pixel recebido é uma cor pastel (candy color), retorna 1 se sim e 0 se não
+
+## Como compilar
+### Use o seguinte comando no terminal já no diretório do código
+```console
+gcc main.c polinomio.c -o main -Wall
+./main```
