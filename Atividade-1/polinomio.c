@@ -1,6 +1,7 @@
 #include "polinomio.h"
 #include <math.h>
 
+// Soma os coeficientes dos polinomios
 polinomio somarPoli(polinomio p1, polinomio p2)
 {
     polinomio result;
@@ -12,6 +13,7 @@ polinomio somarPoli(polinomio p1, polinomio p2)
     return result;
 }
 
+// Calcula a derivada do polinomio
 polinomio derivadaPoli(polinomio p)
 {
     polinomio result;
@@ -23,6 +25,7 @@ polinomio derivadaPoli(polinomio p)
     return result;
 }
 
+// Acha a raiz do polinomio caso ele seja de segundo ou primeiro grau
 solucao raizesPoli(polinomio p)
 {
     float x1, x2;
@@ -43,6 +46,7 @@ solucao raizesPoli(polinomio p)
     return res;
 }
 
+// Calcula o valor do polinomio em um determinado ponto
 float valorPoli(polinomio p, int x)
 {
     float result = pow(x, 3) * p.c3 + pow(x, 2) * p.c2 + x * p.c1 + p.c0;
