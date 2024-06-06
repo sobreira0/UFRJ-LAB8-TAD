@@ -4,6 +4,8 @@ typedef struct {
     int r, g, b;
 } Pixel;
 
+// Soma dois pixels, caso a soma de algum dos componentes exceda 255
+// o valor fica setado para 255
 Pixel pixelDif(Pixel a, Pixel b) 
 {
     Pixel res;
@@ -29,6 +31,7 @@ Pixel pixelDif(Pixel a, Pixel b)
     return res;
 }
 
+// Verifica se o Pixel é uma cor pastel (candy color)
 int candyColors(Pixel p)
 {
     int maiorVal = (p.r > p.g && p.r > p.b) ? p.r : (p.g > p.b) ? p.g : p.b;
@@ -102,13 +105,6 @@ int main(void)
                 break;
         }
     } while (option != 7);
-
-
     
-
-
-
-
-
     return 0;
 }
