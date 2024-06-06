@@ -34,4 +34,5 @@
 ### Use o seguinte comando no terminal já no diretório do código
 ```console
 gcc main.c polinomio.c -o main -Wall
-./main```
+./main
+```
