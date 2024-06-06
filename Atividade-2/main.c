@@ -35,7 +35,7 @@ int candyColors(Pixel p)
     int menorVal = (p.r < p.g && p.r < p.b) ? p.r : (p.g < p.b) ? p.g : p.b;
     int intermed = p.r + p.g + p.b - (maiorVal + menorVal);
 
-    if (maior == 255 && menor >= 192 && menor <= 224 && intermed >= menor && intermed <= maior)
+    if (maiorVal == 255 && menorVal >= 192 && menorVal <= 224 && intermed >= menorVal && intermed <= maiorVal)
         return 1;
 
     return 0;
@@ -70,8 +70,13 @@ int main(void)
                     return -1;
                 }
 
-                p1 = {.r = r, .g = g, .b = b};
-                p2 = {.r = r1, .g = g1, .b= b1};
+                p1.r = r;
+                p1.g = g;
+                p1.b = b;
+
+                p2.r = r1;
+                p2.g = g1;
+                p2.b = b1;
                 break;
             
             case 2:
@@ -82,7 +87,7 @@ int main(void)
             case 3:
                 arg1 = candyColors(p1);
                 arg2 = candyColors(p2);
-                if (arg)
+                if (arg1)
                     printf("P1 Eh uma cor pastel");
                 else 
                     printf("P1 Nao eh uma cor pastel");
